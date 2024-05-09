@@ -1,10 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+:root {
+    --showcase-color: rgba(53, 67, 80, 1);
+    --body-color: rgb(230, 230, 230);
+    --border-color: rgb(203, 203, 203);
+}
+
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 }
 
-.navbar {
-    background-color: blue;
-    height: 250px;
+body {
+    font-family: 'Lato', sans-serif;
+    min-height: 100vh;
+    background-color: var(--body-color);
+}
+
+.container {
+    width: 1100px;
+    margin: 0 auto;
+}
+
+.showcase {
+    background-color: var(--showcase-color);
+    height: 350px;
+    margin-top: 10px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    color: white;
+    padding: 5px 50px;
+}
+
+.personal-info {
+    height: 100%;
+    display: flex;
+
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+    margin: 5px 0;
+}
+
+.skillset ul {
+    list-style-type: none;
+}
+
+li {
+    padding-right: 8px;
+    list-style-type: none;
+}
+
+.social-accounts {
+    margin-bottom: 5px;
+}
+
+.social-accounts a {
+    color: white;
+    text-decoration: none;
+}
+
+.page-section {
+    background-color: white;
+    padding: 5px 50px;
+    align-items: center;
+    border: 1px solid var(--border-color);
+    display: flex;
+}
+
+/* About Me */
+.about-me {
+    /* background-color: white;
+    padding: 5px 50px; */
+    height: 300px;
+    /* align-items: center; */
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+    /* border: 1px solid var(--border-color);
+    display: flex; */
+}
+
+.about-me-info {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    line-height: 1.8rem;
+}
+
+.about-me-title {
+    padding-bottom: 10px;
+    border-bottom: 5px solid black;
+    width: 150px;
+}
+
+.work-experience {
+    padding: 5px 50px;
+    background-color: white;
+    border-radius: 7px;
+    height: 450px;
+    
+}
+
+.margin-top-10 {
+    margin-top: 10px;
+}
+
+.work-experience-title {
+    padding-bottom: 10px;
+    /* border-bottom: 5px solid black; */
+    width: 250px;
 }
