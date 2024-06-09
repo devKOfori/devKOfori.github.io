@@ -1,115 +1,278 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 
 :root {
-    --showcase-color: rgba(53, 67, 80, 1);
-    --body-color: rgb(230, 230, 230);
-    --border-color: rgb(203, 203, 203);
+    --bg-primary: rgb(0, 8, 255);
+    --bg-primary: rgb(70, 75, 243);
+    --bg-light: rgb(230, 230, 230);
+    --title-text: #f504bd;
 }
 
 * {
+    margin: 0;
     box-sizing: border-box;
     padding: 0;
-    margin: 0;
 }
 
 body {
-    font-family: 'Lato', sans-serif;
+    background-color: var(--bg-light);
     min-height: 100vh;
-    background-color: var(--body-color);
+    font-family: 'Lato', Sans-serif;
+    width: 100%;
 }
 
-.container {
-    width: 1100px;
-    margin: 0 auto;
-}
-
-.showcase {
-    background-color: var(--showcase-color);
+/* Display profile */
+.display-profile {
+    width: 100%;
     height: 350px;
-    /* margin-top: 10px; */
-    border-top-left-radius: 7px;
-    border-top-right-radius: 7px;
-    color: white;
-    padding: 5px 50px;
+    background-color: var(--bg-primary);
 }
 
-.personal-info {
+.profile {
+    width: 100%;
+    max-width: 1000px;
+    border: 1px red solid;
     height: 100%;
-    display: flex;
-
-    align-items: center;
+    padding: 20px;
 }
 
-.flex {
-    display: flex;
+.profile-details {
+    color: white;
+    animation: slideInFromLeft 1.5s ease-in;
+}
+
+.socials {
     margin: 5px 0;
 }
 
-.skillset ul {
-    list-style-type: none;
+.socials i {
+    margin-right: 5px;
 }
 
-li {
-    padding-right: 8px;
-    list-style-type: none;
+.email-text, .phone-text {
+    padding-left: 3px;
 }
 
-.social-accounts {
-    margin-bottom: 5px;
+.email, .phone {
+    /* font-size: small; */
+    padding: 3px;
 }
 
-.social-accounts a {
-    color: white;
-    text-decoration: none;
+.profile-image {
+    justify-self: flex-end;
+    animation: slideInFromRight 1.5s ease-in;
 }
 
-.page-section {
-    background-color: white;
-    padding: 5px 50px;
-    align-items: center;
-    border: 1px solid var(--border-color);
+.profile-image img {
+    width: 180px;
+    border-radius: 50%;
+}
+
+/* Main */
+
+
+.about-me p {
+    line-height: 1.5rem;
+}
+
+/* .about-me {
+    animation: slideInFromBottom 1.5s ease-in;
+    animation-delay: 0.5s;
+}
+
+.work-experiences {
+    animation: slideInFromBottom 1.5s ease-in;
+    animation-delay: 1s;
+}
+
+.projects {
+    animation: slideInFromBottom 1.5s ease-in;
+    animation-delay: 1.5s;
+} */
+
+
+
+
+
+/* Utility classes */
+
+.flex {
     display: flex;
-}
-
-/* About Me */
-.about-me {
-    /* background-color: white;
-    padding: 5px 50px; */
-    height: 300px;
-    /* align-items: center; */
-    border-bottom-left-radius: 7px;
-    border-bottom-right-radius: 7px;
-    /* border: 1px solid var(--border-color);
-    display: flex; */
-}
-
-.about-me-info {
-    display: flex;
+    justify-content: center;
     align-items: center;
-    margin-top: 10px;
-    line-height: 1.8rem;
 }
 
-.about-me-title {
-    padding-bottom: 10px;
-    border-bottom: 5px solid black;
-    width: 150px;
+.grid {
+    display: grid;
+    align-items: center;
+    grid-template-columns: 2fr 1fr;
+    gap: 15px;
+}
+
+.container {
+    width: 100%;
+    max-width: 1000px;
+    /* border: 1px solid green; */
+    margin: 20px auto;
+}
+
+.card {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
+}
+
+.card-title {
+    color: var(--bg-primary);
+    margin-bottom: 10px;
+    /* border-bottom: 5px solid var(--bg-primary); */
+    display: inline-block;
 }
 
 .work-experience {
-    padding: 5px 50px;
-    background-color: white;
-    border-radius: 7px;
-    height: 450px;
-    
+    padding-bottom: 30px;
 }
 
-.margin-top-10 {
+.work-experience > div:first-child {
     margin-top: 10px;
 }
 
-.work-experience-title {
-    padding-bottom: 10px;
-    /* border-bottom: 5px solid black; */
-    width: 250px;
+.work-experience-title p {
+    display: inline-block;
+}
+
+.company {
+    color: var(--title-text);
+    font-weight: bold;
+    position: relative;
+    margin-right: 15px;
+    padding-right: 3px;
+}
+
+.company::after {
+    content: '---';
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    
+}
+
+.role {
+    font-style: italic;
+}
+
+.work-experience-duties {
+    margin: 10px 50px;
+    line-height: 1.5rem;
+}
+
+.project {
+    margin-bottom: 30px;
+}
+
+.project-title {
+    margin: 10px 0;
+    font-weight: bold;
+    color: var(--title-text);
+    font-size: 1.3rem;
+}
+
+.project-details p {
+    line-height: 1.5rem;
+}
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile-details {
+            animation: slideInFromTop 1s ease-in;
+        }
+
+        .profile-lead-text {
+            font-size: 1.2rem;
+        }
+
+        
+        .profile-image {
+            justify-self: center;
+            animation: slideInFromBottom 1s ease-in;
+        }
+            
+        .grid {
+            grid-template-columns: 1fr;
+        }
+
+        .work-experience-duties {
+            margin: 10px;
+        }
+
+        .company::after {
+            content: '';
+            position: absolute;
+            right: 0;
+            top: 0;
+            transform: translateX(100%);
+            
+        }
+
+    /* about me */
+    .about-me {
+        border-radius: 0;
+    }
+}
+
+
+/* Animation */
+
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-100%);
+    }
+
+    100% {
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromBottom {
+    0% {
+        opacity: 0;
+        transform: translateY(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
