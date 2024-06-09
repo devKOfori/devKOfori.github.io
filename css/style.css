@@ -30,7 +30,7 @@ body {
 .profile {
     width: 100%;
     max-width: 1000px;
-    border: 1px red solid;
+    /* border: 1px red solid; */
     height: 100%;
     padding: 20px;
 }
