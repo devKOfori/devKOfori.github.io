@@ -179,6 +179,21 @@ body {
     font-size: 1.3rem;
 }
 
+.pl-list {
+    list-style-type: none;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin: 5px 0;
+}
+.pl-list-item {
+    display: block;
+    background-color: var(--bg-primary);
+    color: white;
+    padding: 7px;
+    border-radius: 30px;
+}
+
 .project-details p {
     line-height: 1.5rem;
 }
